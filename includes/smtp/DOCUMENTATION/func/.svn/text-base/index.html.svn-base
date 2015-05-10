@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 FUNC</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+<b>POP3</b> Class
+<hr>
+
+The source file are "func.php" from XPM2 package.
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+// path to func.php file from XPM2 package to include in the current file
+// notice: do not include if you already have include "smtp.php" or "pop3.php" from XPM2 package
+
+require_once '/path/func.php';
+
+echo 'It is Windows platform? '.(FUNC::is_win() ? 'Yes' : 'No').'.';
+
+// .. rest of code
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment FUNC">Comments</a> ]
+
+Last update: Tuesday, June 06, 2006
+
+</pre>
+
+</body>
+</html>

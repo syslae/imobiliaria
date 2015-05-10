@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 POP3::pstat()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+POP3 :: <i>mixed</i> <b>pstat</b> ( <i>resource</i> connection )
+<hr>
+Returns ARRAY if has been successfully recived, FALSE if not.
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+$open = POP3::Connect('mail.host.net', 'username', 'password');
+
+$stat = POP3::pStat($open) OR die('Error');
+
+echo 'Messages: '.$stat[0].', in total '.$stat[1].' Bytes';
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment POP3 pStat">Comments</a> ]
+
+Last update: Friday, June 16, 2006
+
+</pre>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 SMTP::from()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+SMTP :: <i>boolean</i> <b>from</b> ( <i>string</i> address [, <i>string</i> name ] )
+<hr>
+Returns TRUE if has been successfully set, FALSE if not.
+
+<i>string</i> address format are user@hostname
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+$mail = new SMTP;
+
+$fset = $mail->From('me@domain.com');
+
+echo $fset ? 'ok' : 'error';
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment SMTP From">Comments</a> ]
+
+Last update: Friday, June 16, 2006
+
+</pre>
+
+</body>
+</html>

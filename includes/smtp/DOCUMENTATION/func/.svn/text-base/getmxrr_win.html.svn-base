@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 FUNC::getmxrr_win()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+FUNC :: <i>mixed</i> <b>getmxrr_win</b> ( <i>string</i> hostname, <i>array</i> &mxhosts )
+<hr>
+Returns TRUE if any records are found, FALSE if not.
+
+This function getmxrr_win() is the Windows NT version for function getmxrr().
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+$mx = FUNC::is_win() ? FUNC::getmxrr_win('php.net', $rr) : getmxrr('php.net', $rr);
+
+if($mx) print_r($rr);
+else echo 'MX records not found.';
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment FUNC getmxrr_win">Comments</a> ]
+
+Last update: Wednesday, June 28, 2006
+
+</pre>
+
+</body>
+</html>

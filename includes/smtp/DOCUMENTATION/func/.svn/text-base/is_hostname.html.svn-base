@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 FUNC::is_hostname()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+FUNC :: <i>boolean</i> <b>is_hostname</b> ( <i>string</i> hostname )
+<hr>
+Returns TRUE if is public hostname format, FALSE if not.
+
+<i>Notice</i>: "localhost" it is not a public domain.
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+echo FUNC::is_hostname('mail.test.net') ? 'Yes' : 'No';
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment FUNC is_hostname">Comments</a> ]
+
+Last update: Wednesday, June 28, 2006
+
+</pre>
+
+</body>
+</html>

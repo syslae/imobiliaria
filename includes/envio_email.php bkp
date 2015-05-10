@@ -1,0 +1,51 @@
+<?
+  	    require_once 'smtp/smtp.php';
+    	require("../config/define.php");
+        require(DOMAIN_PATH."config/conexaoAr.php");;
+
+    	$sql = "select *from data";
+		$rs = $DB->Execute($sql);
+		$QuantidadeDiasMandarEmail =   $rs->fields['descricao'];
+		$sql3 = "select DATEDIFF(data_final,CURDATE())as QuantidadeDias, data_final,cliente.nome_fantasia as nome_fantasia_cliente, espaco_fisico.nome_fantasia 
+		as  nome_fantasia_empresa, numero_contrato from  contrato 
+		inner join cliente on cliente.id = contrato.cliente_id 
+		inner join espaco_fisico on espaco_fisico.id = contrato.espaco_fisico_id
+		where contrato.status = 1 order by cliente.nome_fantasia asc";
+        $rs2 = $DB->Execute($sql3);
+        
+        //Dados Email
+        
+          $de = "nãoresponder@gmail.com";
+	      $assunto =  "AVISO DE CONTRATO";
+          //DADOS SMTP
+          $smtp = "smtp.inforgeneses.com.br";
+          $usuario = "acessosmtp@inforgeneses.com.br";
+          $senha = "d0c5v35t";
+          //$email ="focusservicos@bol.com.br";
+          $email ="laecyomarcello@gmail.com";
+          
+         $assunto = "CONTRATO";
+        
+        while(!$rs2->EOF)
+        {
+            if($rs2->fields['QuantidadeDias'] <= $QuantidadeDiasMandarEmail)
+            {
+               	
+               $mensagem ="O cliente ".$rs2->fields['nome_fantasia_cliente']." do contrato de numero ".$rs2->fields['numero_contrato']." esta faltando ".$rs2->fields['QuantidadeDias']." dias para vencer o contrato.
+                           Agradece SYSLAE - SISTEMAS.";
+
+                $mail = new SMTP;
+            	$mail->Delivery('relay');
+            	$mail->Relay($smtp, $usuario, $senha, 587, 'login', false);
+            	$mail->TimeOut(10);
+            	$mail->Priority('high');
+            	$mail->From($de);
+            	$mail->AddTo($email);
+            	$mail->Html($mensagem);
+                $mail->Send($assunto);
+            }
+		    $rs2->MoveNext();
+        }
+        
+        												
+?>

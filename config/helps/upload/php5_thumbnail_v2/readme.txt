@@ -1,0 +1,1 @@
+Sample image is by Divine Error at deviant art: http://divineerror.deviantart.com/

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 POP3::pretr()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+POP3 :: <i>mixed</i> <b>pretr</b> ( <i>resource</i> connection, <i>integer</i> message )
+<hr>
+Returns STRING if has been successfully recived, FALSE if not.
+
+Get data of specify message number.
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+$open = POP3::Connect('mail.host.net', 'username', 'password');
+
+// get data of 1'st message
+$data = POP3::pRetr($open, 1);
+
+echo $data ? $data : 'Error';
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment POP3 pRetr">Comments</a> ]
+
+Last update: Friday, June 16, 2006
+
+</pre>
+
+</body>
+</html>

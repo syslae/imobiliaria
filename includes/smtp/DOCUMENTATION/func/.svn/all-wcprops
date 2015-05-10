@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func
+END
+decode_content.html
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/decode_content.html
+END
+is_ipv4.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/is_ipv4.html
+END
+is_mail.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/is_mail.html
+END
+str_clear.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/str_clear.html
+END
+is_alpha.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/is_alpha.html
+END
+split_msg.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/split_msg.html
+END
+close.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/close.html
+END
+getmxrr_win.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/getmxrr_win.html
+END
+split_content.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/split_content.html
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/index.html
+END
+is_win.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/is_win.html
+END
+is_hostname.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/is_hostname.html
+END
+mimetype.html
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/mimetype.html
+END
+is_connection.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/1146/PHP/sae_geneses_prototipo/controllers/smtp/DOCUMENTATION/func/is_connection.html
+END

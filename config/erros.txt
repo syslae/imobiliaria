@@ -1,0 +1,13 @@
++ Status
++ Remover
++ Verificar se tem ou nao data para quando não tiver, não formatar porque se não fica sempre a data atual
++ pesquisas
+- remover pelo x no lado esquerdo
++ atualizarcampos que tem foto acrescentar if(!empty($foto)) $obj->foto = $foto; no controler
++ atualizar campos datetime tenho que recuperar cada valor da data separadamente
+
+
+Proximo projeto:
+Index das pastas ser uma unica include de layoult
+implementar segurança nos dados get com a classe anti-injection (só tem na index)
+implementar classe anti injection

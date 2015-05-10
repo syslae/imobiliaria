@@ -1,0 +1,215 @@
+<?php
+	// VERIFICO SE É OU NÃO OBRIGATÓRIO
+	
+	if($_POST['acao']=='atualizar' and empty($id))
+	{
+		$erro .= " Id";
+		$class_id = 1;
+	}
+
+	if(empty($login))
+	{
+		$erro .= " login";
+		$class_login = 1;
+	}
+	else
+	{
+		if($_POST['acao']=='cadastrar')
+			$sqlL = "select id from usuarios where login = '$login'";
+			
+		if($_POST['acao']=='atualizar')
+			$sqlL = "select id from usuarios where login = '$login' and id <> $id";
+			
+		$rsL = $DB->Execute($sqlL);
+		$trL = $rsL->RecordCount();
+		
+		if($trL>0)
+		{
+			$erroLogin = " Esse login j&aacute; existe.";
+			$erro .= " login existe";
+		}
+	}
+
+	if($_POST['acao']=='cadastrar' and empty($senha))
+	{
+		$erro .= " senha";
+		$class_senha = 1;
+	}
+	
+	if(!empty($senha))
+	{
+		if($senha<>$csenha)
+		{
+			$erroSenha = " A senhas digitadas n&atilde;o s&atilde;o as mesmas.";
+			$class_senha = 1;
+			$class_csenha = 1;
+			$erro .= " nao sao as mesmas";
+		}
+		else if(strlen($senha)<6)
+		{
+			$erroSenha = " O tamanho da senha n&atilde;o deve ser inferior a 6 caracteres";
+			$class_senha = 1;
+			$class_csenha = 1;
+			$erro .= " tamanho da senha";
+		}	
+	}
+
+	if(empty($nome))
+	{
+		$erro .= " nome";
+		$class_nome = 1;
+	}
+
+	if(empty($email) or !verificar_email($email))
+	{
+		$erro .= " email";
+		$class_email = 1;
+	}
+
+	/*if(empty($msn) or !verificar_email($msn))
+	{
+		$erro .= " msn";
+		$class_msn = 1;
+	}
+
+	if(!empty($orkut) and !verificar_url($orkut))
+	{
+		$erro .= " orkut";
+		$class_orkut = 1;
+	}
+*/
+	
+	if(empty($grupo_id))
+	{
+		$erro .= " grupo_id";
+		$class_grupo_id = 1;
+	}
+	/*if(empty($fone))
+	{
+		$erro .= " fone";
+		$class_fone = 1;
+	}
+
+	if(empty($celular))
+	{
+		$erro .= " celular";
+		$class_celular = 1;
+	}*/
+
+	/*$foto = isset($_FILES["foto"]) ? $_FILES["foto"] : FALSE;	
+	$foto = trim($foto["name"]);
+		*/
+	/*if(empty($foto))
+	{
+		$erro .= " foto";
+		$class_foto = 1;
+	}*/
+
+	/*if(empty($ultimoacesso))
+	{
+		$erro .= " ultimoacesso";
+		$class_ultimoacesso = 1;
+	}
+
+	if(empty($acessos))
+	{
+		$erro .= " acessos";
+		$class_acessos = 1;
+	}
+	*/
+	
+	#### debugar
+	//echo $erro;
+	
+	
+	##### modelo para envio de foto
+	/*if (empty($erro))
+	{
+		if(!empty($foto))
+		{
+			require_once "../class_upload.php";
+			##### inicio do codigo de modelo para upload de imagem
+			$upload = new Upload();
+			
+			### Pasta de upload
+			$upload->setPastaUpload('usuarios');
+			
+			### Largura da imagem grande
+			$upload->setLargura(333);
+			$upload->setAltura(250);
+			
+			### Informo o nome do arquivo que tem a imagem que sera enviada
+			$upload->setCampoUpload('foto');
+			$upload->Envia_Arquivo();
+			$foto = $upload->getNomeFoto();
+			$erro = $msgUpload = $upload->getErro2();
+			##### fim do codigo de modelo para upload de imagem
+			// se enviar o upload, o erro estara setado em ok e tenho que dar o unset para que seja possivel prosseguir com o save no banco de dados
+			if ($erro=='ok') $erro=0;
+			#### fim do codigo de modelo para upload de imagem
+		}
+	}*/
+	##### fim do modelo para envio de foto
+	
+
+	if (empty($erro))
+	{
+		class Usuarios extends ADOdb_Active_Record
+		{
+			var $_table = "usuarios";
+		}
+		$obj = new Usuarios();
+		
+		//echo "<p>Atributos da tabela: ";
+		//var_dump($usuarios->getAttributeNames());
+		//echo "Ultimo Id gerado:"; print_r($obj->id);
+        if (!empty($id)) $obj->load("id=?", $id);
+
+        $obj->login = $login;
+        if(!empty($senha)) $obj->senha = geraSenha($senha, $login);
+        $obj->nome = $nome;
+        $obj->email = $email;
+		$obj->grupo_id = $grupo_id;
+       // $obj->msn = $msn;
+        //$obj->orkut = $orkut;
+        //$obj->fone = $fone;
+        $obj->celular = $celular;
+        
+        //$obj->ultimoacesso = $ultimoacesso;
+        //$obj->acessos = $acessos;
+		$dataAtual = date('Y-m-d H:i:s');
+        if (empty($id))
+		{
+			$obj->acessos = 0;
+			$obj->created = $dataAtual;
+		}
+        $obj->modified = $dataAtual;
+        $obj->status = $status;
+		
+		/*if (!empty($foto))
+		{
+			$obj->foto = $foto;
+			// remover a foto caso ela exista
+			if(!empty($fotoOriginal))
+				unlink("../../webroot/img/usuarios/".$fotoOriginal);
+		}*/
+		
+		try 
+		{
+			$ok = $obj->save(); // esse save() vai retornar um UPDATE ou INSERT
+			$_SESSION["msg_index"] = "Salvo com sucesso";
+			
+			
+			redireciona('index.php');
+		}
+		catch(ADODB_Exception $e)
+		{
+			echo "Ocorreu uma execao do tipo ADODB_Exception no modulo de salvar usuarios";
+		}
+		catch(exceptions $e)
+		{
+			//echo $e->getMessage();
+			echo "Ocorreu uma execao no modulo de salvar usuarios";
+		}
+	}
+?>

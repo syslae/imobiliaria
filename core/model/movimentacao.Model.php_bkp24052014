@@ -1,0 +1,24 @@
+<?php
+	$id = (int)$_POST['id'];
+
+	$cliente_id = (int)$_POST['cliente_id'];
+
+	$numero_nota_empenho = trim($_POST['numero_nota_empenho']);
+	$numero_nota_empenho = substr($numero_nota_empenho,0,50);
+	$numero_nota_empenho=addslashes($numero_nota_empenho);
+    $movimentacao_id  = $_REQUEST['movimentacao_id'];
+	$ano_emissao = $_POST['ano_emissao'];
+    $mes_emissao = $_POST['mes_emissao'];
+    $data_pagamento = trim($_POST['data_pagamento']);
+	$servico_id = (int)$_POST['servico_id'];
+   	$valor = trim($_POST['valor']);
+	$imagem = (int)$_POST['imagem'];
+    $n_pd = $_POST['n_pd'];
+    $numero_processo = $_POST['numero_processo'];
+    $arquivo = $_FILES['arquivo'];
+    $data_nota = $_POST['data_nota'];
+    $nf = $_POST['nf'];
+
+
+
+?>

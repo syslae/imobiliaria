@@ -1,0 +1,45 @@
+div.fotooptions {
+
+	position:absolute;
+	width:91px;
+	height:21px;
+	top:147px;
+	left:128px;
+	z-index:2;
+	text-align:right;
+	display:none;
+
+}
+	
+div.fotoopacityoptions {
+
+	float:left;
+	width:21px;
+	height:21px;
+	background:white;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	-moz-opacity:0.5;
+	z-index:1;
+
+}
+	
+div.snd {left:2px;}
+
+div.trd {left:4px;}
+
+div.fth {left:6px;}
+
+	
+
+div.fotooptions img {
+
+	position:absolute;
+	top:3px;
+	left:2px;
+	z-index:10;	
+}
+
+img.snd {left:26px !important;}
+img.trd {left:49px !important;}
+img.fth {left:69px !important;top:0 !important;}

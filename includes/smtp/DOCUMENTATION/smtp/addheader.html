@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 SMTP::addheader()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+SMTP :: <i>boolean</i> <b>addheader</b> ( <i>string</i> name, <i>string</i> value )
+<hr>
+Returns TRUE if has been successfully added, FALSE if not.
+
+The most important values of header (see the list) can not be set, 
+because XPM2 build this values automatically or you can use another function to set (like: AddTo(), From()).
+
+This values of header can <b>not</b> be set:
+ Subject, From, To, Cc, Bcc, Date, Content-Type, 
+ Content-Transfer-Encoding, Content-Disposition, 
+ X-Mailer, X-Priority, X-MSMail-Priority, MIME-Version
+
+<i>Notice</i>: you can add multiple header values with the same name.
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+$mail = new SMTP;
+
+$hadd = $mail->AddHeader('X-Whatever', 'the value');
+
+echo $hadd ? 'added' : 'error';
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment SMTP AddHeader">Comments</a> ]
+
+Last update: Friday, June 16, 2006
+
+</pre>
+
+</body>
+</html>

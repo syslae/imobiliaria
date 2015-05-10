@@ -1,0 +1,80 @@
+Delivered-To: user@hostname.com
+Received: by 1.2.3.4 with SMTP id l23blabla;
+        Sat, 3 Jun 2006 08:05:35 -0700 (PDT)
+Return-Path: <me@domain.com>
+Message-Id: <123.blabla@mx.host.com>
+From: me@domain.com
+To: user@hostname.com
+Subject: Hello World!
+Date: Sat, 03 Jun 2006 18:05:35 +0300
+X-Mailer: XPM2 v.0.1 <www.xpertmailer.com>
+Content-Type: multipart/mixed;
+	boundary="=_4a88c102a1ff3566714b0f13b303bd0f"
+MIME-Version: 1.0
+
+This is a message in MIME Format. If you see this, your mail reader does not support this format. 
+
+--=_4a88c102a1ff3566714b0f13b303bd0f
+Content-Type: multipart/related;
+	boundary="=_3abc38b8af55461a0de627846bc3f322"
+
+--=_3abc38b8af55461a0de627846bc3f322
+Content-Type: multipart/alternative;
+	boundary="=_2f1154070bb4a0f95707f11dc991fb07"
+
+--=_2f1154070bb4a0f95707f11dc991fb07
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+Text version of the message
+--=_2f1154070bb4a0f95707f11dc991fb07
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<font color=3D"red"><b><u>HTML version of the message</u></b></font><br>=
+<br><i>Powered by</i> <img src=3D"cid:663ac91fe8098e1935267234a005ec70">
+--=_2f1154070bb4a0f95707f11dc991fb07--
+--=_3abc38b8af55461a0de627846bc3f322
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Disposition: inline;
+	filename="photo.gif"
+Content-ID: <663ac91fe8098e1935267234a005ec70>
+
+R0lGODlhUAAPAJEAABef2WZmZv///4mOeSH5BAAAAAAALAAAAABQAA8AAAKsjI+py+0Pj5
+i02ouz3rwbAYTiSALCgKbqyrbuC6vCV1rkGef67s4BOAKKhCae8RjzEYEUU1CWOlFQ02pl
+gMNScdLoBPtdKYNO51KsTXep7DT4zdVm5+0obVgGndFb7nda1yVV5WaVZfdDxlQWcihXVx
+gZqPY46Yh119iodwPFdkhIafkJNrjmOEZWMoTU6kqVOdTU+VrLk7q6emnLy6LUARwsPIwR
+YXyMnKxQAAA7
+--=_3abc38b8af55461a0de627846bc3f322--
+--=_4a88c102a1ff3566714b0f13b303bd0f
+Content-Type: application/zip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="file.zip"
+
+UEsDBBQAAAAAAJiNrjTZdJDA2wAAANsAAAAJAAAAaW1hZ2UuZ2lmR0lGODlhUAAPAJEAAB
+ef2WZmZv///4mOeSH5BAAAAAAALAAAAABQAA8AAAKsjI+py+0Pj5i02ouz3rwbAYTiSALC
+gKbqyrbuC6vCV1rkGef67s4BOAKKhCae8RjzEYEUU1CWOlFQ02plgMNScdLoBPtdKYNO51
+KsTXep7DT4zdVm5+0obVgGndFb7nda1yVV5WaVZfdDxlQWcihXVxgZqPY46Yh119iodwPF
+dkhIafkJNrjmOEZWMoTU6kqVOdTU+VrLk7q6emnLy6LUARwsPIwRYXyMnKxQAAA7UEsBAh
+QAFAAAAAAAmI2uNNl0kMDbAAAA2wAAAAkAAAAAAAAAAAAgAAAAAAAAAGltYWdlLmdpZlBL
+BQYAAAAAAQABADcAAAACAQAAAAA=
+--=_4a88c102a1ff3566714b0f13b303bd0f
+Content-Type: application/zip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+	filename="file2.zip"
+
+UEsDBBQAAAAAAJiNrjTZdJDA2wAAANsAAAAJAAAAaW1hZ2UuZ2lmR0lGODlhUAAPAJEAAB
+ef2WZmZv///4mOeSH5BAAAAAAALAAAAABQAA8AAAKsjI+py+0Pj5i02ouz3rwbAYTiSALC
+gKbqyrbuC6vCV1rkGef67s4BOAKKhCae8RjzEYEUU1CWOlFQ02plgMNScdLoBPtdKYNO51
+KsTXep7DT4zdVm5+0obVgGndFb7nda1yVV5WaVZfdDxlQWcihXVxgZqPY46Yh119iodwPF
+dkhIafkJNrjmOEZWMoTU6kqVOdTU+VrLk7q6emnLy6LUARwsPIwRYXyMnKxQAAA7UEsBAh
+QAFAAAAAAAmI2uNNl0kMDbAAAA2wAAAAkAAAAAAAAAAAAgAAAAAAAAAGltYWdlLmdpZlBL
+BQYAAAAAAQABADcAAAACAQAAAAA=
+--=_4a88c102a1ff3566714b0f13b303bd0f--

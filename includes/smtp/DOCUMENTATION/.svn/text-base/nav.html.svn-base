@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 Nav</title>
+<style>
+body, a, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+a {
+	font-weight: bold;
+	color: blue;
+
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre><a href="http://xpertmailer.sourceforge.net/" target="main">Project Page</a> <b>|</b> <a href="http://www.xpertmailer.com/forum/index.php?c=5" target="main">Forum</a> <b>|</b> <a href="examples.html" target="main">Examples</a> <b>|</b> <a href="http://sourceforge.net/project/showfiles.php?group_id=153855&package_id=192090" target="main">Download</a> <b>|</b> Author: Tanase Laurentiu Iulian</pre>
+
+</body>
+</html>

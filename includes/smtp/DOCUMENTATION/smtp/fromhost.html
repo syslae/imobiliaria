@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 SMTP::fromhost()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+SMTP :: <i>boolean</i> <b>fromhost</b> ( <i>string</i> hostname, <i>boolean</i> &havemx )
+<hr>
+Returns TRUE if has been successfully set, FALSE if not.
+
+This function 'FromHost' is designed for anti-spam/bulk mail prevention on <b>client</b> and/or <b>relay</b> mail delivery.
+
+<i>Notice</i>: one of MX zone for <i>string</i> hostname must have same IP address (external/unique) with this mail sender.
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+$mail = new SMTP;
+
+$mail->Delivery('client');
+
+$mail->FromHost('maildomain.net', $havemx) OR die('error');
+
+echo $havemx ? 'Ok' : 'Ok, but doesn't have MX zone!';
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment SMTP FromHost">Comments</a> ]
+
+Last update: Friday, June 16, 2006
+
+</pre>
+
+</body>
+</html>

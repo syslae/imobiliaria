@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 SMTP::send()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+SMTP :: <i>boolean</i> <b>send</b> ( <i>string</i> subject )
+<hr>
+Returns TRUE if the e-mail has been successfully sent, FALSE if not.
+
+Send the e-mail.
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+$mail = new SMTP;
+
+// before you must use:
+// AddTo() - set 'To' mail address
+// From() - set 'From' mail address
+// Text() or/and Html() - set the message
+
+$sent = $mail->Send('subject');
+
+echo $sent ? 'ok' : 'error';
+
+// for debugging
+echo '&lt;br&gt;Result: '.$mail->result;
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment SMTP Port">Comments</a> ]
+
+Last update: Friday, June 16, 2006
+
+</pre>
+
+</body>
+</html>

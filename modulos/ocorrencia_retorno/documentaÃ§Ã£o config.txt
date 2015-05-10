@@ -1,0 +1,6 @@
+LAYOUT | 
+ValorPadraoInicial | ValorPadraoFinal | NumRetorno | diaDataGerRetorno | mesDataGerRetorno | 
+anoDataGerRetorno | LinhaT | inicioNossoNumero24 | inicioNossoNumero90 | inicioNossoNumero024 | 
+NossoNumero24 | NossoNumero90 | idcontasareceberT | descricao | LinhaU | Valor | diaDataOcorrencia | 
+mesDataOcorrencia | anoDataOcorrencia | diaDataCredito | mesDataCredito | anoDataCredito | idcontasareceberU | 
+digitoNossoNumero | Código de ocorrência 

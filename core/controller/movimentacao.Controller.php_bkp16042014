@@ -1,0 +1,121 @@
+<? 
+	if($_POST['acao']=='atualizar' and empty($id)) 
+	{
+		$erro .= ' Id'; 
+		$class_id = 1; 
+	} 
+	if(empty($cliente_id)) 
+	{
+		$erro .= 'cliente_id'; 
+		$class_cliente_id = 1; 
+	}  
+/*
+    if(empty($numero_nota_empenho)) 
+	{
+		$erro .= 'numero_nota_empenho'; 
+		$class_numero_nota_empenho = 1; 
+	}  
+*/
+	if(empty($servico_id)) 
+	{
+		$erro .= 'servico_id'; 
+		$class_servico_id = 1; 
+	}  
+	if(empty($valor)) 
+	{
+		$erro .= 'valor'; 
+		$class_valor = 1; 
+	} 
+  
+   /*
+    if(empty($data_nota)) 
+	{
+		$erro .= 'data_nota'; 
+		$class_data_nota = 1; 
+	} 
+ 
+    if(empty($nf)) 
+	{
+		$erro .= 'nf'; 
+		$class_nf = 1; 
+	} 
+  */
+    if(empty($mes_emissao)) 
+	{
+		$erro .= 'mes_emisao'; 
+		$class_mes_emissao = 1; 
+	} 
+    if(empty($ano_emissao)) 
+	{
+		$erro .= 'ano_emissao'; 
+		$class_ano_emissao = 1; 
+	} 
+  
+
+	//$DB->debug = true;
+
+ if (empty($erro))
+	{
+		class Movimentacao extends ADOdb_Active_Record
+		{
+			var $_table = 'movimentacao';
+		}
+		$obj = new Movimentacao();
+		if (!empty($id)) $obj->load('id=?', $id);
+      
+ 	    $data_pagamento=$data2[2]."-".$data2[1]."-".$data2[0];
+       	$data3=explode("/", $data_nota);
+ 	    $data_nota = $data3[2]."-".$data3[1]."-".$data3[0];
+        $obj->cliente_id = $cliente_id; 
+		$obj->numero_nota_empenho = $numero_nota_empenho; 
+		$obj->mes_emissao = $mes_emissao;
+        $obj->ano_emissao = $ano_emissao;
+     	$obj->servico_id = $servico_id;
+        $obj->situacao_pagamento_id = 2;  
+		$obj->valor = moeda_ajuste($valor);
+        $obj->nf = $nf;
+        $obj->n_pd = $n_pd;
+       	$obj->imagem = $imagem; 
+		$obj->data_nota = $data_nota; 
+        $obj->status = 1;
+        $obj->espaco_fisico_id  = $_SESSION["espaco_fisico_id"];
+	   if (empty($id))	$obj->created = date('Y-m-d H:i:s') ;
+		try
+		{
+             $ok = $obj->save();  // esse save() vai retornar um UPDATE ou INSERT
+
+             $sql =  "select id from movimentacao order by id desc";
+             $Rs = $DB->EXECUTE($sql);
+             if($_FILES['arquivo']['size'] > 1024000)
+            {
+                print "<SCRIPT> alert('Seu arquivo não poderá ser maior que 1mb'); window.history.go(-1); </SCRIPT>\n";
+                exit;
+            }
+            /* Defina aqui o diretório destino do upload */
+            if (!empty($_FILES['arquivo']['tmp_name']) and is_file($_FILES['arquivo']['tmp_name'])) 
+            {
+                $caminho="../../upload/";
+                //$DadosTipo = explode("/",$_FILES['arquivo']['type']);
+                $caminho = $caminho.$Rs->fields['id'].".jpeg";
+                /* Defina aqui o tipo de arquivo suportado */
+                if ((eregi(".gif$", $_FILES['arquivo']['name'])) || (eregi(".jpg$", $_FILES['arquivo']['name'])))
+                {
+                    copy($_FILES['arquivo']['tmp_name'],$caminho);
+                }   
+        	}  
+
+			$_SESSION['msg_index'] = 'Salvo com sucesso';
+			redireciona('index.php');
+		}
+		catch(ADODB_Exception $e)
+		{
+			echo 'Ocorreu uma execao do tipo ADODB_Exception no modulo de salvar ';
+		}
+		catch(exceptions $e)
+		{
+			//echo $e->getMessage();
+			echo 'Ocorreu uma execao no modulo de salvar';
+		}
+	}
+?>
+		 

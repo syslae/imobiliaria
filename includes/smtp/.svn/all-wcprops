@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/1148/PHP/sae_geneses_prototipo/controllers/smtp
+END
+HOWTO
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/1148/PHP/sae_geneses_prototipo/controllers/smtp/HOWTO
+END
+func.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1148/PHP/sae_geneses_prototipo/controllers/smtp/func.php
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/1148/PHP/sae_geneses_prototipo/controllers/smtp/LICENSE
+END
+pop3.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1148/PHP/sae_geneses_prototipo/controllers/smtp/pop3.php
+END
+smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1148/PHP/sae_geneses_prototipo/controllers/smtp/smtp.php
+END
+mime.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/1148/PHP/sae_geneses_prototipo/controllers/smtp/mime.php
+END

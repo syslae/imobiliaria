@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 Introduction</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+<b>XPM2</b> ( XPertMailer Version 2 ) SMTP & POP3 PHP Mail Client. Can send and read messages in MIME format.
+<hr>
+
+This is a documentation for XPM2 v.0.1
+Feel free to test whatever you want from this PHP Mail Client.
+
+You can send me any comment/bug/whisper for XPM2 by e-mail.
+To do this, click on the "comments" link from any page on the left menu.
+
+<i><b>Attention</b></i>: do not confuse with XPertMailer Version 1.x, XPM2 have different sintax.
+
+<hr color="white">
+<b>XPM2 Version:</b> 0.1 Stable
+<b>Requirements:</b> PHP 4.3 or greater.
+<b>Recommended:</b> Latest version of PHP and Unix (generic) or Win NT platform.
+<b>License:</b> GNU/GPL
+<b>Domain:</b> <a style="color: blue; text-decoration: none" href="http://www.xpertmailer.com/">www.xpertmailer.com</a>
+</pre>
+
+</body>
+</html>

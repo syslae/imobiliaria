@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XPM2 FUNC::mimetype()</title>
+<style>
+body, pre {
+	font-family: Verdana;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body bgcolor="#f1f3f5" topmargin="10" leftmargin="14">
+
+<pre>
+FUNC :: <i>string</i> <b>mimetype</b> ( <i>string</i> filename )
+<hr>
+Returns the mime type value of extention filename. 
+
+<i>Notice</i>: by default (if mime type value of extention filename are not in list), 
+this function mimetype() return <i>string</i> application/octet-stream value.
+
+Example:
+<table border="0" bgcolor="white">
+<tr><td>
+<pre><code>
+echo FUNC::mimetype('photo.gif');
+</code></pre>
+</td></tr>
+</table>
+
+<hr color="white">
+
+[ <a style="color: blue; text-decoration: none" href="mailto:expertphp@gmail.com?subject=XPM2 Comment FUNC mimetype">Comments</a> ]
+
+Last update: Wednesday, June 28, 2006
+
+</pre>
+
+</body>
+</html>
